@@ -1,0 +1,190 @@
+/** RESET **/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    list-style:none outside none;
+    text-decoration:none;
+}
+
+html {width:100%;height: auto;background-color: #fff;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:grayscale;}
+table {border-collapse: collapse;border-spacing: 0;}
+a, img {border: 0 none;outline: 0 none;}
+input {outline: 0 none;border: 0 none;background: 0 none;}
+*{
+    font-family: "Roboto",;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+/* --- GENERAL --- */
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Roboto";
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0 auto;
+    background-image: url(/assets/images/homepage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    z-index: 1; /* Ensure header is above background */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),;
+    flex-wrap: wrap;
+}
+header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1;
+}
+.header {
+    width: 100%;
+    display:flex;
+    margin-top: 44px;
+    justify-content: space-between;
+    max-width: 1400px;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 100%; /* Adjust width as needed */
+    height: auto;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    max-width: 300px;  
+}
+nav {
+    display: flex;
+    width: 100%;
+    max-width: 470px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+.icons {
+    max-width: 161px;
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 96px;
+    margin-bottom: 50px;
+}
+h1{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 80px;
+}
+.Marketplace {
+    margin: 111px 520px 1px 550px;
+    max-width: 491px;
+}
+.Marketplace h2 {
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.artisan {
+    margin: 1px 470px 25px 470px;
+}
+.artisan h2 {
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.old {
+    margin-bottom: 277px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.old h3 {
+    max-width: 200px;
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 250px;
+}
+.old h4 {
+    max-width: 200px;
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 452px;
+}
+.discover {
+    flex-wrap: nowrap;
+}
+.discover svg {
+   margin: 0 626px 0px 631px;
+   position: absolute;
+   top: 573px;
+}
+.discover p {
+    position: relative;
+    margin: 0 626px 70px 645px;
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    bottom: 190px;
+
+}
+
+/* --- Responsive ---*/
+@media only screen and (max-width: 768px) {
+  
+    }
