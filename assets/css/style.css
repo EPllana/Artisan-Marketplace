@@ -27,11 +27,11 @@ body{
     font-family: "Roboto";
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-}
+} 
 
 header {
     margin: 0 auto;
-    background-image: url(/assets/images/homepage.png);
+    background-image: url(assets/images/homepage.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
