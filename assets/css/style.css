@@ -31,7 +31,7 @@ body{
 
 header {
     margin: 0 auto;
-    background-image: url(assets/images/homepage.png);
+    background-image: url(/assets/images/homepage.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
