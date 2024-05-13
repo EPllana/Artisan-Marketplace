@@ -37,6 +37,7 @@ body{
     flex-wrap: wrap;
     display: flex;
     padding-top: 20px;
+    max-width: 1400px;
 }
 nav {
     width: 100%;
@@ -107,10 +108,11 @@ svg {
     margin-right: 28px;
 }
 .lastchild{
-    margin-right: 0px;
+    margin-right: 20px;
 }
 .home {
     width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
