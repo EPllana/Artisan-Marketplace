@@ -27,6 +27,10 @@ body{
     font-family: "Roboto";
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 } 
 
 header {
@@ -202,7 +206,7 @@ h1{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    bottom: 190px;
+    bottom: 211px;
 
 }
 .container {
@@ -271,11 +275,37 @@ h1{
 .all {
     display: flex;
     max-width: 1400px;
-    width: 100%;
     justify-content: space-between;
-    margin: 0 auto;
-}
+    width: calc(33.33%);
+    gap: 30px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
 
+}
+.wood {
+    max-width: 400px;
+    height: auto;
+    margin-left: 30px;
+}
+.wood img {
+    max-width: 340px;
+    height: auto;
+}
+.market {
+    width: 100%;
+    height: auto;
+    margin-left: 30px;
+}
+.wooden {
+    max-width: 400px;
+    height: auto;
+    margin-left: 30px;
+}
+.wooden img {
+    max-width: 340px;
+    height: auto;
+}
 /* --- Responsive ---*/
 @media only screen and (max-width: 768px) {
   
