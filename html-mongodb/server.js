@@ -1,4 +1,4 @@
-const express = require("exoress");
+const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -15,7 +15,7 @@ app.listen(3000, function() {
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://ernispllana:<password>@cluster0.su4if9d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://epllana03:UcOOmr5XaJ2Yrmyj@cluster0.sxtt1wg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
