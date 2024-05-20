@@ -115,6 +115,12 @@ nav ul li a:hover {
 .icons svg {
     max-width: 300px;
 }
+.icons svg:hover {
+    transform: scale(1.1); /* Hover effect to slightly enlarge the icon */
+}
+svg{
+     margin-right: 20px;
+}
 h1{
     color: #FFF;
     font-size: 20px;
@@ -208,6 +214,7 @@ h1{
     font-weight: 400;
     line-height: normal;
     bottom: 265px;
+    margin-right: 18px;
 
 }
 .container {

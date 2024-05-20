@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": " Arctic Harmony",
+        "price": 520,
+        "image": "assets/images/artesianguitar.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Sky Steps",
+        "price": 220,
+        "image": "assets/images/artisan chair c2d962e4-1665-4e6b-b0ae-338d0c2c36c4.png"
+    },
+    {
+        "id": 3,
+        "name": "Sereny Plate Set",
+        "price": 250,
+        "image": "assets/images/artisan drink p a88c8c25-9efa-49cb-b377-aefcf3e5de1d.png"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Valey Elegance",
+        "price": 420,
+        "image": "assets/images/artisan gardrob 2e91b69f-c1a3-4751-97ad-56d1684f12fc.png"
+    },
+    {
+        "id": 5,
+        "name": "Light Lore",
+        "price": 140,
+        "image": "assets/images/pjata artesiane.webp"
+    },
+    {
+        "id": 6,
+        "name": "Whisering Wilow",
+        "price": 120,
+        "image": "assets/images/Image 11.png"
+    } 
+]
