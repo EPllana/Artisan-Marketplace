@@ -47,13 +47,13 @@
         </div>     
     </div>
         <hr style="margin: 0;">
-
-                <div class="container">
-                        
+                <div class="container">                
                 
                         <h3>Our Products</h3>
-                    
+                        <button id="add-product-btn"> Add Product </button>
+                        <button id="remove-product-btn">Remove Product</button>
 
+              
                     <div class="listProduct">
 
                         <div class="item">
@@ -99,8 +99,117 @@
                         </div>
                     </div>
                 </div>
+                <style>
+                       .product-container {
+                        display: flex;
+                        flex-wrap: wrap; /* Kjo bën që produktet të rreshtohen nëse s'ka më vend */
+                        justify-content: flex-start; /* Kjo vendos produktet në fillim të rreshtit */
+                    }
+                    .product {
+                        margin-top: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 20px;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                        background: antiquewhite;
+                        max-width: 1400px;      
+                        border: 2px solid chocolate;
+                        /*margin-left: 22%;*/
+                        width: 445px;
+                        margin-left:12%;
+                    }
+            
+                    .product img {
+                       max-width: 400px; 
+                        height: auto; 
+                        border-radius: 10px; 
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                        width: 100%;                       
+                    }
+                    .product img:hover {
+                        transform: scale(1.03); 
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); }
+                      
+                        .product .price {   
+                            font-size: x-large;
+                            margin-left: 25px;
+                            margin-bottom: 10px;
+                            padding: 10px; 
+                            border-radius: 8px; 
+                            border: 2px solid; 
+                            border-image: linear-gradient(45deg, #ff6b6b, #f0c27b, #43c6ac) 1; 
+                            border-radius: 4px;
+                        }
+                        .product .price:hover {
+                            background-color: #ff6b6b; 
+                            color: white; 
+                            transform: scale(1.05); 
+                        }
+                        .product h2 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;   
+                            border: 1px solid black;     
+                            padding-left: 15%;         
+                            padding-right: 15%;
+                            max-width: 420px;
+                            border-radius: 8px;
+                        }
+                        .product h2:hover{
+                            background-color: #f0f0f0;
+                            color: #333;
+                            transform: scale(1.05);
+                        }
+                </style>
 
 
                 <script src="js/app.js"></script>
+                <script>
+                    document.getElementById('add-product-btn').addEventListener('click', function() {
+                        // Krijoni një element për produktin tuaj
+                        var productElement = document.createElement('div');
+                        productElement.classList.add('item'); // Shtoni klasën 'item' ose ndonjë stil tjetër të dëshiruar
+                    
+                        // Shtoni një imazh për produktin
+                        var imageElement = document.createElement('img');
+                        imageElement.src = 'plisi.jpg'; // Vendosni rrugën e imazhit tuaj
+                        imageElement.alt = 'Product Image'; // Vendosni tekstualisht përshkruesin e imazhit tuaj
+                        productElement.appendChild(imageElement);
+                    
+                        // Shtoni emrin e produktit
+                        var nameElement = document.createElement('h2');
+                        nameElement.textContent = 'Plisi Heroik'; // Vendosni emrin e produktit tuaj
+                        productElement.appendChild(nameElement);
+                    
+                        // Shtoni çmimin e produktit
+                        var priceElement = document.createElement('div');
+                        priceElement.classList.add('price');
+                        priceElement.textContent = '$100'; // Vendosni çmimin e produktit tuaj
+                        productElement.appendChild(priceElement);
+                    
+                        // Shtoni butonin për fshirjen e produktit
+                        var deleteButton = document.createElement('button');
+                        deleteButton.textContent = 'Remove Product';
+                        deleteButton.addEventListener('click', function() {
+                            productElement.remove(); // Fshini vetë produktin
+                        });
+                        productElement.appendChild(deleteButton);
+                    
+                        // Shtoni produktin në listProduct
+                        document.querySelector('.listProduct').appendChild(productElement);
+                    });
+                    
+                    document.getElementById('remove-product-btn').addEventListener('click', function() {
+                        var productContainer = document.querySelector('.listProduct');
+                        if (productContainer.lastElementChild) {
+                            productContainer.removeChild(productContainer.lastElementChild);
+                        }
+                    });
+                    </script>
+
+                
 </body>
 </html>

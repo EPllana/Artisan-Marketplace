@@ -413,7 +413,36 @@ header .iconCart{
     font-size: large;
     font-weight: bold;
 }
-
+#add-product-btn{
+    margin-top: 10px;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+    padding: 10px 20px; /* Add padding for space inside the border */
+    border: 2px solid chocolate; /* Set a beautiful border color */
+    border-radius: 8px; /* Rounded corners for the border */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    display: inline-block; /* Ensure the border wraps neatly around the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+#remove-product-btn{ 
+    margin-top: 10px;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+    padding: 10px 20px; /* Add padding for space inside the border */
+    border: 2px solid chocolate; /* Set a beautiful border color */
+    border-radius: 8px; /* Rounded corners for the border */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    display: inline-block; /* Ensure the border wraps neatly around the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
