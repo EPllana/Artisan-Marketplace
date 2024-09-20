@@ -71,8 +71,9 @@ header::before {
     width: 100%; /* Adjust width as needed */
     height: auto;
     margin-bottom: 30px;
-    margin-left: 20px;
     max-width: 300px;  
+    margin-right: 50px;
+    
 }
 nav {
     display: flex;
@@ -91,6 +92,7 @@ nav ul {
 
 nav ul li {
     display: inline;
+    
 }
 
 nav ul li a {
@@ -197,6 +199,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 .discover svg {
    position: absolute;
@@ -204,6 +207,7 @@ h1{
    display: flex;
    align-items: center;
    justify-content: center;
+   margin: 0 auto;
 }
 .discover p {
     position: relative;
@@ -213,9 +217,7 @@ h1{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    bottom: 265px;
-    margin-right: 50%;
-    margin-left:48.5%;
+    bottom: 270px;
 }
 .container {
     max-width: 1400px;
@@ -227,8 +229,7 @@ h1{
 .mate {
     width: 100%;
     max-width: 400px;
-    position: relative;
-    margin-left: -50px;
+    margin-left: -20px;
 }
 .mate img {
     width: 100%;
@@ -263,13 +264,13 @@ h1{
     gap: 50px;
     width: 100%;
     height: auto;
-    width: 100%;
-    height: auto;
     position: absolute;
     max-width: 800px;
-    width: 100%;
     left: 22%;
     margin-top: 60px;
+}
+.container {
+    position: relative;
 }
 .material h4 {
     font-weight: 700;
@@ -284,7 +285,6 @@ h1{
     display: flex;
     max-width: 1400px;
     justify-content: space-between;
-    width: calc(33.33%);
     gap: 30px;
     margin-left: 30px;
     align-items: center;
@@ -321,8 +321,13 @@ h1{
     display: flex;
     margin-bottom: 200px;
 }
+.comfort img {
+    width: 100%;
+}
 .matters {
     margin-right: 300px;
+    max-width: 50%;
+    width: 100%;
 }
 .matters h3,h4{
     color: #1E1E1E;
@@ -530,6 +535,7 @@ h1{
     width: 100%;
     background-color: #F7F5F6;
     padding: 20px 1px 20px 1px;
+    flex-wrap: nowrap;
 }
 
 .footer-column {
@@ -574,6 +580,11 @@ h1{
     line-height: normal;
 }
 
+.btn.btn-outline-secondary {
+    margin-bottom: 20px;
+    border-radius: 0%; color: black; padding: 15px 80px 15px 80px; margin-bottom: 50px;
+    padding: 15 80px 15px 80px;
+}
 .footer-newsletter form {
     display: flex;
     flex-direction: column;
@@ -621,12 +632,20 @@ h1{
     font-size: 2.6rem;
     color: rgba(255, 255, 255, 0.853);
     display: none;
+    cursor: pointer;
+    transition: transform 0.5s ease;
   }
+  #menu-icon.bx-menu {
+    transform: rotate(0deg); /* Ikona hamburger fillon nga pozicioni normal */
+}
 
-
-
+#menu-icon.bx-x {
+    transform: rotate(90deg); /* Rrotullim për ikonën X */
+}
 .nav-links.show {
     display: flex;
+    opacity: 1; /* Bëhet e dukshme */
+    transform: translateX(0); /* Vjen brenda ekranit */
 }
 
 .icons svg {
@@ -638,6 +657,88 @@ h1{
     font-size: 24px;
     cursor: pointer;
 }
+/* Stilet për ikonën e menu-së */
+#menu-icon {
+    font-size: 2.6rem;
+    color: rgba(255, 255, 255, 0.853);
+    display: block;
+    cursor: pointer;
+}
+
+#menu-close-icon {
+    font-size: 2.6rem;
+    color: rgba(255, 255, 255, 0.853);
+    display: none;
+    cursor: pointer;
+}
+
+/* Kur hapet menuja, tregohet flex */
+.nav-links {
+    display: none; /* E fshehur në fillim */
+    flex-direction: column;
+    opacity: 0; /* Fillimisht është e padukshme */
+    transform: translateX(-100%); /* Fillon jashtë ekranit */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.nav-links.show {
+    display: flex;
+    position: absolute;
+    top: 60px; /* Pozicionoje sipër, poshtë header-it */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Një sfond për ta dalluar menunë */
+    z-index: 1000; /* Për ta vendosur sipër përmbajtjes */
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin-left: 450px;
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* Default styles for small screens */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.nav-links.show {
+    display: flex;
+    opacity: 1;
+}
+@media (max-width: 900px) {
+    .discover{
+        display: none;
+    }
+}
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        opacity: 1;
+        position: static;
+        background-color: transparent; /* Hiq sfondin për ekranet e mëdha */
+    }
+
+    #menu-icon {
+        display: none; /* Fshi ikonën hamburger në ekranet e mëdha */
+    }
+}
 
 /* --- Responsive ---*/
 @media (max-width: 768px) {
@@ -648,6 +749,7 @@ h1{
     #menu-icon {
         display: block;
         order: 3;
+        margin-right: 20px;
     }
 
     .logo h1 {
@@ -696,9 +798,18 @@ h1{
         flex-direction: column;
         width: 100%;
         margin: 0 auto;
+        max-width: 800px;
     }
     .icons{
         order: 2;
+        display: none;
+    }
+    .old h3{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .old h4 {
+        display: none;
     }
 
     .marketplace h2, .artisan h2 {
@@ -711,17 +822,111 @@ h1{
     .discover {
         display: none;
      }
-
-
     .discover p {
         font-size: 16px;
     }
+    .nav-links ul {
+        list-style: none;
+        display: flex;
+        margin-left: 1px;
+    }
+    .logo{
+        align-self: center;
+        margin-left: 30px;
+    }
+    .material {
+        display: none;
+    }
+    .all{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        
+    }
+    .wooden,.market,.wood{
+        margin-left: 1px;
+    }
+    .wooden img {
+        width: 100%;
+    }
+    .wooden {
+        margin-bottom: 60px;
+    }
+    .matters{
+        margin-right: 50px;
+        margin-left: 30px;
+    }
+    .matters h3 {
+        font-size: 20px;
+        font-weight: 550;
+    }
+    .matters h4 {
+        font-size: 22px;
+    }
+    .matters p{
+        font-size: 12px;
+        line-height: 25px;
+    }
+    .first {
+        margin-right: 10px;
+    }
+
+    .last {
+        max-height: 300px;
+        height: 100%;
+        left: 55%;
+        top: 20%;
+        overflow-y: hidden;
+    }
+    .last h2 {
+        margin-top: 40px;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .last h5 {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+    .new {
+        display: flex;
+        flex-direction: column;
+    }
+    .comfort{
+        margin-bottom: 60px;
+    }
+    .clock{
+        margin-bottom: 26px;
+        margin-top: 50px;
+    }
+    .last{
+        display: none;
+    }
+    .flower img {
+        width: 50%;
+   }
+   .collection{
+    margin-bottom: 60px;
+   }
+   .stay{
+    margin-bottom: 60px;
+   }
+   .gallery{
+        flex-wrap: wrap;
+        margin: 0 auto;
+   }
+   .image-container{
+        max-width: 150px;
+        width: 100%;
+   }
+   .image-container img {
+    width: 100%;
+   }
 }
 
 @media (max-width: 600px) {
     .logo{
         align-self: center;
-        margin-right: 30px;
+        margin-left: 30px;
     }
    
     .logo h1 {
@@ -733,11 +938,6 @@ h1{
 
     nav ul li a {
         font-size: 14px;
-    }
-    #menu-icon {
-        display: block;
-        order: 1;
-        margin-right: 20px;
     }
     .marketplace h2, .artisan h2 {
         font-size: 24px;
@@ -762,5 +962,340 @@ h1{
     }
     .old h4{
         margin-left: 0px;
+    }
+    .logo{
+        margin-right: 1px;
+        margin-left: 30px;
+        max-width: 200px;
+        width: 100%;
+        font-size: 16px;
+    }
+    .iron{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .iron h2 {
+        font-size: 18px;
+    }
+    .iron h3 {
+        font-size: 16px;
+    }
+    .iron p {
+        font-size: 12px;
+    }
+    .iron h5 {
+        font-size: 16px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    .wood img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .market img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .wooden img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .matters{
+        margin-right: 3px;
+        margin-left: 30px;
+    }
+    .matters h3 {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 550;
+    }
+    .matters p{
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .first {
+        margin-right: 10px;
+    }
+    .comfort img {
+        max-height: 300px;
+        /*padding: 30px 15px;*/
+
+    }
+
+}
+@media  (max-width: 600px) {
+
+    .btn.btn-outline-secondary {
+        margin-bottom: 1px;
+        border-radius: 0%; color: black; 
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+        .material {
+            width: 100%;
+            max-width: 350px;
+            padding: 15px 25px;
+            margin-top: 50px;
+            gap: 20px;
+            height: 100px;    
+            display: flex;    
+
+        }
+        .material h4 {
+            font-size: 10px;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .material p {
+            font-size: 8px;
+        }
+        .container {
+            margin-bottom: 60px;
+        }
+        .last {
+            overflow-x: hidden;
+            max-height: 200px;
+            height: 100%;
+            left: 52%;
+            top: 30%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-overflow: hidden;
+            
+        }
+        .last h2 {
+            margin-top: 30px;
+            font-size: 16px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+    
+        }
+        .last h5 {
+            font-size: 12px;
+            padding-right: 20px;
+        }
+        .comfort {
+            /*
+            overflow-x:hidden;
+            overflow-y: hidden;
+            */
+        }
+        .last{
+            padding-right: 10px;
+        }
+        .clock {
+            margin-left: 50px;
+        }
+        .flower{
+            margin-top: 77px;
+            margin-left: 0%;
+            margin: 0 auto;
+           
+        }
+        .flower img {
+            width: 100%;
+        }
+        .footer-main {
+            max-width: 1400px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .footer-column{
+            order: 1;
+            margin-left: 100px;
+            max-width: 350px;
+            width: 100%;
+        }
+        .footer-newsletter{
+            order: 3;
+            width: 100%;
+            flex-wrap: nowrap;
+            display: block;
+            margin: 30px 50px 50px 50px;
+            
+        }
+        .footer-column.right{
+            order: 2;
+            margin-left: 100px;
+            max-width: 350px;
+            margin-right: 100px;
+            width: 100%;
+        }
+        .footer-column h4{
+            font-size: 18px;
+        }
+        .footer-column ul li{
+            font-size: 12px;
+        }
+}
+
+@media  (max-width: 500px) {
+    .material {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px 25px;
+        margin-top: 20px;
+        gap: 20px;
+        height: 80px;   
+        left: 50px;
+        display: flex;    
+    }
+    .material h4 {
+        font-size: 10px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .market {
+        display: none;
+    }
+    .wood img {
+        width: 100%;
+        max-width: 200px;
+    }
+    .market img {
+        width: 100%;
+        max-width: 200px;
+    }
+    .wooden img {
+        width: 100%;
+        max-width: 200px;
+    }
+    .last {
+        left: 52%;
+    }
+    .first {
+        margin-right: 1px;
+    }
+    .footer{
+        margin-top: 1px;
+    }
+    .footer-content {
+        max-width: 1400px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .footer-contact{
+        display: flex;
+        flex-direction: row;
+        max-width: 1400px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 10px;
+        text-align: left;
+        max-width: 200px;
+        width: 100%;
+        text-align: center;
+    }
+    .contact-item{
+        margin: 0px 0px;
+    }
+    .footer-main {
+        max-width: 1400px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .footer-column{
+        order: 1;
+        margin-left: 50px;
+        width: 100%;
+    }
+    .footer-newsletter{
+        order: 3;
+        max-width: 300px;
+        width: 100%;
+        flex-wrap: nowrap;
+        display: block;
+    }
+    .footer-column.right{
+        order: 2;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 100%;
+    }
+    .footer-column h4{
+        font-size: 18px;
+    }
+    .footer-column ul li{
+        font-size: 12px;
+    }
+}
+
+
+
+@media  (max-width: 400px ){
+    .logo {
+        margin-left: 30px;
+
+    }
+    .iron h5 {
+        margin-bottom: 1px;
+    }
+    .btn.btn-outline-secondary {
+        margin-bottom: 1px;
+        border-radius: 0%; color: black; 
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .material {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px 10px;
+        margin-top: 10px;
+        gap: 20px;
+        left: 40px;
+        height: 70px;
+    }
+    .material h4 {
+        font-size: 10px;
+        position: relative;
+    }
+    .material p {
+        font-size: 8px;
+    }
+    .iron h2 {
+        font-size: 14px;
+    }
+    .iron h3 {
+        font-size: 12px;
+    }
+    .iron p {
+        font-size: 8px;
+    }
+    .iron h5 {
+        font-size: 12px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    .last h2 {
+        margin-left: 80px;
+    }
+    .last h5 {
+        margin-left: 80px;
+    }
+    
+}
+@media  (max-width: 350px) {
+
+    .comfort img {
+        padding: 1px;
+        width: 100%;
+        margin-right: 1px;
+    }
+    .footer-column{
+        margin-left: 30px;
+        margin-right: 0px;
+    }
+    .footer-column.right{
+        margin-right: 0px;
+        margin-left: 30px;
+    }
+
+}
+@media  (max-width: 320px) {
+    .material {
+        display: none;
     }
 }

@@ -8,3 +8,4 @@ document.addEventListener('DOMContentLoaded', function () {
         menuIcon.classList.toggle('bx-x');
     });
 });
+
