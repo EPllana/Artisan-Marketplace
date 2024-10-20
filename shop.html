@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="assets/css/shop.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
-        <nav>
+        <i class='bx bx-menu'id="menu-icon"></i>
+        <nav class="nav-links">
            <ul>
                <li><a href="index.html">Home</a></li>
                <li><a href="shop.html">Shop</a></li>
@@ -167,6 +169,18 @@
 
 
                 <script src="js/app.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                const menuIcon = document.getElementById('menu-icon');
+                const navLinks = document.querySelector('.nav-links');
+            
+                menuIcon.addEventListener('click', function () {
+                    navLinks.classList.toggle('show');
+                    menuIcon.classList.toggle('bx-menu');
+                    menuIcon.classList.toggle('bx-x');
+                });
+            });
+                </script>
                 <script>
                     document.getElementById('add-product-btn').addEventListener('click', function() {
                         // Krijoni një element për produktin tuaj
