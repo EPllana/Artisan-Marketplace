@@ -9,11 +9,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!--Swiper-->
         <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 <body>
     <div class="header">
-         <nav>
+         <i class='bx bx-menu'id="menu-icon"></i>
+         <nav class="nav-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -220,7 +222,7 @@
             <div class="about">
                 <div class="us">
                 <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. rporis pariatur est possimus optio voluptate a distinctio voluptatibus repudiandae cum? Repellat dolores voluptatem distinctio autem. Excepturi!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. rporis pariatur est possimus optio voluptate a distinctio voluptatibus!</p>
             </div>
             <div class="company">
                 <h2>Company</h2>
@@ -272,38 +274,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>const swiper = new Swiper('#mySlider', {
-        // Optional parameters
-        direction: 'horizontal',
-        slidesPerView:5,
-        //loop: true,
-      
-        // Autoplay
-        autoplay: {
-            delay: 3000, // Delay between transitions (in milliseconds)
-            disableOnInteraction: false, // Enable/disable autoplay on user interaction
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+        menuIcon.classList.toggle('bx-menu');
+        menuIcon.classList.toggle('bx-x');
+    });
+});
+
+    </script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
         },
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
+        700: {
+            slidesPerView: 2,
         },
-      
-        // Navigation arrows
-        navigation: {
-            nextEl: '#mySlider .swiper-button-next',
-            prevEl: '#mySlider .swiper-button-prev',
+        1000: {
+            slidesPerView: 3,
         },
-      
-        // And if we need scrollbar
-         scrollbar: {
-           el: '.swiper-scrollbar',
-         },
-      });
-      swiper.on('slideChange', function (swiper) {
-        console.log(swiper);
-        console.log('slide changed');
-        
-      });</script>
+        1300: {
+            slidesPerView: 4, 
+        },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});</script>
 </body>
 </html>
